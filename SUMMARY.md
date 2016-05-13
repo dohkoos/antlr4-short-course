@@ -1,1 +1,1 @@
-* [安装ANTLR](book/install-antlr.md)
+* [安装ANTLR](book/installing-antlr.md)
