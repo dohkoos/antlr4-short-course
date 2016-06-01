@@ -1,4 +1,4 @@
-# 执行ANTLR和测试识别器
+# 开始
 
 先看下面这段用于识别像hello world那样短语的简单语法：
 
@@ -88,7 +88,7 @@ grun Hello s -tree
 grun Hello s -gui
 ```
 
-{% img /uploads/hello-parse-tree.png hello-parse-tree %}
+![](http://codemany.com/uploads/hello-parse-tree.png)
 
 以下是TestRig可用的所有参数：
 
