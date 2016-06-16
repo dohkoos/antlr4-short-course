@@ -1,2 +1,5 @@
+* [自述](README.md)
 * [安装ANTLR](book/installing-antlr.md)
 * [开始](book/getting-started.md)
+* [概念](book/concepts/index.md)
+  * [二义性](book/concepts/ambiguity.md)
