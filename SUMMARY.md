@@ -2,4 +2,5 @@
 * [安装ANTLR](book/installing-antlr.md)
 * [开始](book/getting-started.md)
 * [概念](book/concepts/index.md)
+  * [实现语法分析器](book/concepts/implementing-parsers.md)
   * [二义性](book/concepts/ambiguity.md)
