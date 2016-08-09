@@ -4,3 +4,4 @@
 * [概念](book/concepts/index.md)
   * [实现语法分析器](book/concepts/implementing-parsers.md)
   * [二义性](book/concepts/ambiguity.md)
+  * [语法分析树](book/concepts/parse-tree.md)
