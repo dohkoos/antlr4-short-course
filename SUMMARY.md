@@ -5,6 +5,8 @@
   * [实现语法分析器](book/concepts/implementing-parsers.md)
   * [二义性](book/concepts/ambiguity.md)
   * [语法分析树](book/concepts/parse-tree.md)
+  * [Visitor和Listener](book/concepts/visitor-listener.md)
+* [处理同一文件中的不同格式](book/multiple-formats.md)
 * [算术表达式语言](book/arithmetic-expression.md)
 * [使用Visitor构建计算器](book/calculator-visitor.md)
 * [使用Listener构建计算器](book/calculator-visitor.md)
