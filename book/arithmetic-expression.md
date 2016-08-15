@@ -55,4 +55,4 @@ grun Calc prog -gui calc.txt
 
 TestRig会弹出一个显示语法分析树的窗口：
 
-{% img /uploads/calc-parse-tree.png calc-parse-tree %}
+![](http://codemany.com/uploads/calc-parse-tree.png)
