@@ -1,39 +1,39 @@
-# VisitorºÍListener
+# Visitorå’ŒListener
 
-ANTLRÔÚËüµÄÔËÐÐ¿âÖÐÎªÁ½ÖÖÊ÷±éÀú»úÖÆÌá¹©Ö§³Ö¡£Ä¬ÈÏÇé¿öÏÂ£¬ANTLRÉú³ÉÒ»¸öÓï·¨·ÖÎöÊ÷Listener½Ó¿Ú£¬ÔÚÆäÖÐ¶¨ÒåÁË»Øµ÷·½·¨£¬ÓÃÓÚÏìÓ¦±»ÄÚ½¨µÄÊ÷±éÀúÆ÷´¥·¢µÄÊÂ¼þ¡£
+ANTLRåœ¨å®ƒçš„è¿è¡Œåº“ä¸­ä¸ºä¸¤ç§æ ‘éåŽ†æœºåˆ¶æä¾›æ”¯æŒã€‚é»˜è®¤æƒ…å†µä¸‹ï¼ŒANTLRç”Ÿæˆä¸€ä¸ªè¯­æ³•åˆ†æžæ ‘ListeneræŽ¥å£ï¼Œåœ¨å…¶ä¸­å®šä¹‰äº†å›žè°ƒæ–¹æ³•ï¼Œç”¨äºŽå“åº”è¢«å†…å»ºçš„æ ‘éåŽ†å™¨è§¦å‘çš„äº‹ä»¶ã€‚
 
-ÔÚListenerºÍVisitor»úÖÆÖ®¼ä×î´óµÄ²»Í¬ÊÇ£ºListener·½·¨±»ANTLRÌá¹©µÄ±éÀúÆ÷¶ÔÏóµ÷ÓÃ£»¶øVisitor·½·¨±ØÐëÏÔÊ½µÄµ÷ÓÃvisit·½·¨±éÀúËüÃÇµÄ×Ó½Úµã£¬ÔÚÒ»¸ö½ÚµãµÄ×Ó½ÚµãÉÏÈç¹ûÍü¼Çµ÷ÓÃvisit·½·¨¾ÍÒâÎ¶×ÅÄÇÐ©×ÓÊ÷Ã»ÓÐµÃµ½·ÃÎÊ¡£
+åœ¨Listenerå’ŒVisitoræœºåˆ¶ä¹‹é—´æœ€å¤§çš„ä¸åŒæ˜¯ï¼šListeneræ–¹æ³•è¢«ANTLRæä¾›çš„éåŽ†å™¨å¯¹è±¡è°ƒç”¨ï¼›è€ŒVisitoræ–¹æ³•å¿…é¡»æ˜¾å¼çš„è°ƒç”¨visitæ–¹æ³•éåŽ†å®ƒä»¬çš„å­èŠ‚ç‚¹ï¼Œåœ¨ä¸€ä¸ªèŠ‚ç‚¹çš„å­èŠ‚ç‚¹ä¸Šå¦‚æžœå¿˜è®°è°ƒç”¨visitæ–¹æ³•å°±æ„å‘³ç€é‚£äº›å­æ ‘æ²¡æœ‰å¾—åˆ°è®¿é—®ã€‚
 
-ÈÃÎÒÃÇÊ×ÏÈ´ÓListener¿ªÊ¼¡£ÔÚÎÒÃÇÁË½âListenerÖ®ºó£¬ÎÒÃÇÒ²½«¿´µ½ANTLRÈçºÎÉú³É×ñÑ­VisitorÉè¼ÆÄ£Ê½µÄÊ÷±éÀúÆ÷¡£
+è®©æˆ‘ä»¬é¦–å…ˆä»ŽListenerå¼€å§‹ã€‚åœ¨æˆ‘ä»¬äº†è§£Listenerä¹‹åŽï¼Œæˆ‘ä»¬ä¹Ÿå°†çœ‹åˆ°ANTLRå¦‚ä½•ç”Ÿæˆéµå¾ªVisitorè®¾è®¡æ¨¡å¼çš„æ ‘éåŽ†å™¨ã€‚
 
-### Óï·¨·ÖÎöÊ÷Listener
+### è¯­æ³•åˆ†æžæ ‘Listener
 
-ÔÚCalc.javaÖÐÓÐÕâÑùÁ½ÐÐ´úÂë£º
+åœ¨Calc.javaä¸­æœ‰è¿™æ ·ä¸¤è¡Œä»£ç ï¼š
 
 ```
 ParseTreeWalker walker = new ParseTreeWalker();
 walker.walk(new DirectiveListener(), tree);
 ```
 
-ÀàParseTreeWalkerÊÇANTLRÔËÐÐÊ±Ìá¹©µÄÓÃÓÚ±éÀúÓï·¨·ÖÎöÊ÷ºÍ´¥·¢ListenerÖÐ»Øµ÷·½·¨µÄÊ÷±éÀúÆ÷¡£ANTLR¹¤¾ß¸ù¾ÝCalc.gÖÐµÄÓï·¨×Ô¶¯Éú³ÉParseTreeListener½Ó¿ÚµÄ×Ó½Ó¿ÚCalcListenerºÍÄ¬ÈÏÊµÏÖCalcBaseListener£¬ÆäÖÐº¬ÓÐÕë¶ÔÓï·¨ÖÐÃ¿¸ö¹æÔòµÄenterºÍexit·½·¨¡£DirectiveListenerÊÇÎÒÃÇ±àÐ´µÄ¼Ì³Ð×ÔCalcBaseListenerµÄ°üº¬ÌØ¶¨Ó¦ÓÃ´úÂëµÄÊµÏÖ£¬°ÑËü´«µÝ¸øÊ÷±éÀúÆ÷ºó£¬Ê÷±éÀúÆ÷ÔÚ±éÀúÓï·¨·ÖÎöÊ÷Ê±¾Í»á´¥·¢DirectiveListenerÖÐµÄ»Øµ÷·½·¨¡£
+ç±»ParseTreeWalkeræ˜¯ANTLRè¿è¡Œæ—¶æä¾›çš„ç”¨äºŽéåŽ†è¯­æ³•åˆ†æžæ ‘å’Œè§¦å‘Listenerä¸­å›žè°ƒæ–¹æ³•çš„æ ‘éåŽ†å™¨ã€‚ANTLRå·¥å…·æ ¹æ®Calc.gä¸­çš„è¯­æ³•è‡ªåŠ¨ç”ŸæˆParseTreeListeneræŽ¥å£çš„å­æŽ¥å£CalcListenerå’Œé»˜è®¤å®žçŽ°CalcBaseListenerï¼Œå…¶ä¸­å«æœ‰é’ˆå¯¹è¯­æ³•ä¸­æ¯ä¸ªè§„åˆ™çš„enterå’Œexitæ–¹æ³•ã€‚DirectiveListeneræ˜¯æˆ‘ä»¬ç¼–å†™çš„ç»§æ‰¿è‡ªCalcBaseListenerçš„åŒ…å«ç‰¹å®šåº”ç”¨ä»£ç çš„å®žçŽ°ï¼ŒæŠŠå®ƒä¼ é€’ç»™æ ‘éåŽ†å™¨åŽï¼Œæ ‘éåŽ†å™¨åœ¨éåŽ†è¯­æ³•åˆ†æžæ ‘æ—¶å°±ä¼šè§¦å‘DirectiveListenerä¸­çš„å›žè°ƒæ–¹æ³•ã€‚
 
 ![](http://codemany.com/uploads/calc-listener-hierachy.png)
 
-ÏÂÍ¼×ó±ßµÄÓï·¨·ÖÎöÊ÷ÏÔÊ¾ParseTreeWalkerÖ´ÐÐÁËÒ»´ÎÉî¶ÈÓÅÏÈ±éÀú£¬ÓÉ´ÖÐéÏß±íÊ¾£¬¼ýÍ··½Ïò´ú±í±éÀú·½Ïò¡£ÓÒ±ßÏÔÊ¾µÄÊÇÓï·¨·ÖÎöÊ÷µÄÍêÕûµ÷ÓÃÐòÁÐ£¬ËüÃÇÓÉParseTreeWalker´¥·¢µ÷ÓÃ¡£µ±Ê÷±éÀúÆ÷Óöµ½¹æÔòassignµÄ½ÚµãÊ±£¬Ëü´¥·¢enterAssign()²¢ÇÒ¸øËü´«µÝAssignContextÓï·¨·ÖÎöÊ÷½Úµã¡£ÔÚÊ÷±éÀúÆ÷·ÃÎÊÍêassign½ÚµãµÄËùÓÐ×Ó½Úµãºó£¬Ëü´¥·¢exitAssign()¡£
+ä¸‹å›¾å·¦è¾¹çš„è¯­æ³•åˆ†æžæ ‘æ˜¾ç¤ºParseTreeWalkeræ‰§è¡Œäº†ä¸€æ¬¡æ·±åº¦ä¼˜å…ˆéåŽ†ï¼Œç”±ç²—è™šçº¿è¡¨ç¤ºï¼Œç®­å¤´æ–¹å‘ä»£è¡¨éåŽ†æ–¹å‘ã€‚å³è¾¹æ˜¾ç¤ºçš„æ˜¯è¯­æ³•åˆ†æžæ ‘çš„å®Œæ•´è°ƒç”¨åºåˆ—ï¼Œå®ƒä»¬ç”±ParseTreeWalkerè§¦å‘è°ƒç”¨ã€‚å½“æ ‘éåŽ†å™¨é‡åˆ°è§„åˆ™assignçš„èŠ‚ç‚¹æ—¶ï¼Œå®ƒè§¦å‘enterAssign()å¹¶ä¸”ç»™å®ƒä¼ é€’AssignContextè¯­æ³•åˆ†æžæ ‘èŠ‚ç‚¹ã€‚åœ¨æ ‘éåŽ†å™¨è®¿é—®å®ŒassignèŠ‚ç‚¹çš„æ‰€æœ‰å­èŠ‚ç‚¹åŽï¼Œå®ƒè§¦å‘exitAssign()ã€‚
 
 ![](http://codemany.com/uploads/listener-call-sequence.png)
 
-Listener»úÖÆµÄÇ¿´óÖ®´¦ÔÚÓÚËùÓÐ¶¼ÊÇ×Ô¶¯µÄ¡£ÎÒÃÇ²»±ØÒªÐ´Óï·¨·ÖÎöÊ÷±éÀúÆ÷£¬¶øÇÒÎÒÃÇµÄListener·½·¨Ò²²»±ØÒªÏÔÊ½µØ·ÃÎÊËüÃÇµÄ×Ó½Úµã¡£
+Listeneræœºåˆ¶çš„å¼ºå¤§ä¹‹å¤„åœ¨äºŽæ‰€æœ‰éƒ½æ˜¯è‡ªåŠ¨çš„ã€‚æˆ‘ä»¬ä¸å¿…è¦å†™è¯­æ³•åˆ†æžæ ‘éåŽ†å™¨ï¼Œè€Œä¸”æˆ‘ä»¬çš„Listeneræ–¹æ³•ä¹Ÿä¸å¿…è¦æ˜¾å¼åœ°è®¿é—®å®ƒä»¬çš„å­èŠ‚ç‚¹ã€‚
 
-### Óï·¨·ÖÎöÊ÷Visitor
+### è¯­æ³•åˆ†æžæ ‘Visitor
 
-ÓÐÐ©Çé¿öÏÂ£¬ÎÒÃÇÊµ¼ÊÏëÒª¿ØÖÆµÄÊÇ±éÀú±¾Éí£¬ÔÚÄÇÀïÎÒÃÇ¿ÉÒÔÏÔÊ½µØµ÷ÓÃvisit·½·¨È¥·ÃÎÊ×ÓÊ÷½Úµã¡£Ñ¡Ïî-visitor¸æËßANTLR¹¤¾ß´ÓÏàÓ¦Óï·¨Éú³ÉVisitor½Ó¿ÚºÍÄ¬ÈÏÊµÏÖ£¬ÆäÖÐº¬ÓÐÕë¶ÔÓï·¨ÖÐÃ¿¸ö¹æÔòµÄvisit·½·¨¡£
+æœ‰äº›æƒ…å†µä¸‹ï¼Œæˆ‘ä»¬å®žé™…æƒ³è¦æŽ§åˆ¶çš„æ˜¯éåŽ†æœ¬èº«ï¼Œåœ¨é‚£é‡Œæˆ‘ä»¬å¯ä»¥æ˜¾å¼åœ°è°ƒç”¨visitæ–¹æ³•åŽ»è®¿é—®å­æ ‘èŠ‚ç‚¹ã€‚é€‰é¡¹-visitorå‘Šè¯‰ANTLRå·¥å…·ä»Žç›¸åº”è¯­æ³•ç”ŸæˆVisitoræŽ¥å£å’Œé»˜è®¤å®žçŽ°ï¼Œå…¶ä¸­å«æœ‰é’ˆå¯¹è¯­æ³•ä¸­æ¯ä¸ªè§„åˆ™çš„visitæ–¹æ³•ã€‚
 
-ÏÂÍ¼ÊÇÎÒÃÇÊìÏ¤µÄVisitorÄ£Ê½²Ù×÷ÔÚÓï·¨·ÖÎöÊ÷ÉÏ¡£×ó±ß²¿·ÖµÄ´ÖÐéÏß±íÊ¾Óï·¨·ÖÎöÊ÷µÄÉî¶ÈÓÅÏÈ±éÀú£¬¼ýÍ··½Ïò´ú±í±éÀú·½Ïò¡£ÓÒ±ß²¿·ÖÖ¸Ã÷VisitorÖÐµÄ·½·¨µ÷ÓÃÐòÁÐ¡£
+ä¸‹å›¾æ˜¯æˆ‘ä»¬ç†Ÿæ‚‰çš„Visitoræ¨¡å¼æ“ä½œåœ¨è¯­æ³•åˆ†æžæ ‘ä¸Šã€‚å·¦è¾¹éƒ¨åˆ†çš„ç²—è™šçº¿è¡¨ç¤ºè¯­æ³•åˆ†æžæ ‘çš„æ·±åº¦ä¼˜å…ˆéåŽ†ï¼Œç®­å¤´æ–¹å‘ä»£è¡¨éåŽ†æ–¹å‘ã€‚å³è¾¹éƒ¨åˆ†æŒ‡æ˜ŽVisitorä¸­çš„æ–¹æ³•è°ƒç”¨åºåˆ—ã€‚
 
 ![](http://codemany.com/uploads/visitor-call-sequence.png)
 
-ÏÂÃæÊÇCalc.javaÖÐµÄÁ½ÐÐ´úÂë£º
+ä¸‹é¢æ˜¯Calc.javaä¸­çš„ä¸¤è¡Œä»£ç ï¼š
 
 ```
 EvalVisitor eval = new EvalVisitor();
@@ -41,8 +41,8 @@ EvalVisitor eval = new EvalVisitor();
 eval.visit(tree);
 ```
 
-ÎÒÃÇÊ×ÏÈ³õÊ¼»¯×ÔÖÆµÄÊ÷±éÀúÆ÷EvalVisitor£¬È»ºóµ÷ÓÃvisit()È¥·ÃÎÊÕû¿ÃÓï·¨·ÖÎöÊ÷¡£ANTLRÔËÐÐÊ±Ìá¹©µÄVisitorÖ§³Ö´úÂë»áÔÚ¿´µ½¸ù½ÚµãÊ±µ÷ÓÃvisitProg()¡£ÔÚÄÇÀï£¬visitProg()»á°Ñ×ÓÊ÷×÷Îª²ÎÊýµ÷ÓÃvisit·½·¨¼ÌÐø±éÀú£¬Èç´ËµÈµÈ¡£
+æˆ‘ä»¬é¦–å…ˆåˆå§‹åŒ–è‡ªåˆ¶çš„æ ‘éåŽ†å™¨EvalVisitorï¼Œç„¶åŽè°ƒç”¨visit()åŽ»è®¿é—®æ•´æ£µè¯­æ³•åˆ†æžæ ‘ã€‚ANTLRè¿è¡Œæ—¶æä¾›çš„Visitoræ”¯æŒä»£ç ä¼šåœ¨çœ‹åˆ°æ ¹èŠ‚ç‚¹æ—¶è°ƒç”¨visitProg()ã€‚åœ¨é‚£é‡Œï¼ŒvisitProg()ä¼šæŠŠå­æ ‘ä½œä¸ºå‚æ•°è°ƒç”¨visitæ–¹æ³•ç»§ç»­éåŽ†ï¼Œå¦‚æ­¤ç­‰ç­‰ã€‚
 
 ![](http://codemany.com/uploads/calc-visitor-hierachy.png)
 
-ANTLR×Ô¶¯Éú³ÉµÄVisitor½Ó¿ÚºÍÄ¬ÈÏÊµÏÖ¿ÉÒÔÈÃÎÒÃÇÎªVisitor·½·¨±àÐ´×Ô¼ºµÄÊµÏÖ£¬ÈÃÎÒÃÇ±ÜÃâ±ØÐë¸²Ð´½Ó¿ÚÖÐµÄÃ¿¸ö·½·¨£¬ÈÃÎÒÃÇ½ö½ö¾Û½¹ÔÚÎÒÃÇ¸ÐÐËÈ¤µÄ·½·¨ÉÏ¡£ÕâÖÖ·½·¨¼õÉÙÁËÎÒÃÇÑ§Ï°ANTLR±ØÐëÒª»¨·ÑµÄÊ±¼ä£¬ÈÃÎÒÃÇ»Øµ½ÎÒÃÇËùÊìÏ¤µÄ±à³ÌÓïÑÔÁìÓò¡£
+ANTLRè‡ªåŠ¨ç”Ÿæˆçš„VisitoræŽ¥å£å’Œé»˜è®¤å®žçŽ°å¯ä»¥è®©æˆ‘ä»¬ä¸ºVisitoræ–¹æ³•ç¼–å†™è‡ªå·±çš„å®žçŽ°ï¼Œè®©æˆ‘ä»¬é¿å…å¿…é¡»è¦†å†™æŽ¥å£ä¸­çš„æ¯ä¸ªæ–¹æ³•ï¼Œè®©æˆ‘ä»¬ä»…ä»…èšç„¦åœ¨æˆ‘ä»¬æ„Ÿå…´è¶£çš„æ–¹æ³•ä¸Šã€‚è¿™ç§æ–¹æ³•å‡å°‘äº†æˆ‘ä»¬å­¦ä¹ ANTLRå¿…é¡»è¦èŠ±è´¹çš„æ—¶é—´ï¼Œè®©æˆ‘ä»¬å›žåˆ°æˆ‘ä»¬æ‰€ç†Ÿæ‚‰çš„ç¼–ç¨‹è¯­è¨€é¢†åŸŸã€‚
