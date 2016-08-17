@@ -7,6 +7,7 @@
   * [语法分析树](book/concepts/parse-tree.md)
   * [Visitor和Listener](book/concepts/visitor-listener.md)
 * [处理同一文件中的不同格式](book/multiple-formats.md)
+* [重写输入流](book/rewriting-input-stream.md)
 * [发送记号到不同的通道](book/different-channels.md)
 * [算术表达式语言](book/arithmetic-expression.md)
 * [使用Visitor构建计算器](book/calculator-visitor.md)
