@@ -10,5 +10,5 @@
 * [重写输入流](book/rewriting-input-stream.md)
 * [发送记号到不同的通道](book/different-channels.md)
 * [算术表达式语言](book/arithmetic-expression.md)
-* [使用Visitor构建计算器](book/calculator-visitor.md)
-* [使用Listener构建计算器](book/calculator-visitor.md)
+* [使用Visitor模式计算结果](book/calculator-visitor.md)
+* [使用Listener模式计算结果](book/calculator-listener.md)
