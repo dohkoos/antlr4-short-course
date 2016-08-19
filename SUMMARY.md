@@ -6,6 +6,7 @@
   * [二义性](book/concepts/ambiguity.md)
   * [语法分析树](book/concepts/parse-tree.md)
   * [Visitor和Listener](book/concepts/visitor-listener.md)
+* [在语法中嵌入任意的操作](book/embedding-actions.md)
 * [处理同一文件中的不同格式](book/multiple-formats.md)
 * [重写输入流](book/rewriting-input-stream.md)
 * [发送记号到不同的通道](book/different-channels.md)
