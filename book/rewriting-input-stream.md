@@ -1,6 +1,6 @@
 # 重写输入流
 
-现在准备要构建一个工具，用来把<a href="/blog/reading-notes-the-definitive-antlr4-reference-part7/">ANTLR 4权威参考读书笔记（7）</a>中idata.txt里的数据按group分行显示，就像这样：
+现在准备要构建一个工具，用来把前面idata.txt里的数据按group分行显示，就像这样：
 
 ```
 2 9 10
