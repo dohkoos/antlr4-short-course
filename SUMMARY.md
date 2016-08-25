@@ -15,3 +15,4 @@
 * [使用Visitor模式计算结果](book/calculator-visitor.md)
 * [使用Listener模式计算结果](book/calculator-listener.md)
 * [语法设计](book/grammar-design.md)
+* [常用语言模式](book/common-language-patterns.md)
