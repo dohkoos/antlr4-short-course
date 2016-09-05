@@ -17,3 +17,4 @@
 * [语法设计](book/grammar-design.md)
 * [常用语言模式](book/common-language-patterns.md)
 * [优先级，左递归以及相关性](book/precedence-left-recursion-associativity.md)
+* [常用词法结构](book/common-lexical-structures.md)
