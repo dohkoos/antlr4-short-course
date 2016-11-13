@@ -1,6 +1,6 @@
 # 安装ANTLR
 
-ANTLR是由Java写成的，所以在安装ANTLR前必须保证已经安装有Java 1.6或以上版本。你可以到 http://www.antlr.org/download.html 下载ANTLR的最新版本，或者也可使用命令行工具。
+ANTLR是由Java写成的，所以在安装ANTLR前必须保证已经安装有Java 1.6或以上版本。你可以到 http://www.antlr.org/download.html 下载ANTLR的最新版本，或者也可使用命令行工具下载：
 
 ```
 curl -O http://www.antlr.org/download/antlr-4.5.1-complete.jar
@@ -14,7 +14,7 @@ antlr-4.5.1-complete.jar包含运行ANTLR工具的所有必要依赖，以及编
 java -jar antlr-4.5.1-complete.jar  # 启动org.antlr.v4.Tool
 ```
 
-如果正常会看到以下帮助信息：
+如果正常的话会看到以下帮助信息：
 
 ```
 ANTLR Parser Generator  Version 4.5.1
