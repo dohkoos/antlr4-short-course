@@ -1,6 +1,6 @@
 * [自述](README.md)
 * [安装ANTLR](installing-antlr.md)
-* [开始](getting-started.md)
+* [入门](getting-started.md)
 * [概念](concepts/index.md)
   * [实现语法分析器](concepts/implementing-parsers.md)
   * [二义性](concepts/ambiguity.md)

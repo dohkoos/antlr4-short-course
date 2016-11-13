@@ -1,9 +1,9 @@
-# 开始
+# 入门
 
 先看下面这段用于识别像hello world那样短语的简单语法：
 
 ```
-grammar Hello;               // 定义文法的名字
+grammar Hello;               // 定义语法的名字
 
 s  : 'hello' ID ;            // 匹配关键字hello，后面跟着一个标志符
 ID : [a-z]+ ;                // 匹配小写字母标志符
@@ -36,7 +36,7 @@ javac -cp .:./antlr-4.5.1-complete.jar:$CLASSPATH $*
 compile *.java
 ```
 
-到此，我们已经有了一个可以被HelloParser和HelloLexer利用的可执行的识别器，只缺一个主程序去触发语言识别了。
+到此，我们已经有了一个可以被执行的识别器，只缺一个主程序去触发语言识别了。
 
 ANTLR运行库有提供称之为TestRig的测试工具，可以让你不创建主程序就能测试语法。TestRig使用Java反射调用编译后的识别器，它能显示关于识别器如何匹配输入的大量信息。
 
