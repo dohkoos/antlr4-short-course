@@ -1,4 +1,5 @@
 * [自述](README.md)
+* [前言](preface.md)
 * [安装ANTLR](installing-antlr.md)
 * [入门](getting-started.md)
 * [基本概念](basic-concept.md)
