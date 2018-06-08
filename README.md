@@ -1,6 +1,6 @@
 # ANTLR 4简明教程
 
-本书是根据最新的ANTLR 4语法编写的简明教程，以开源的形式创作，源码托管在GitHub上，欢迎[参与维护](https://github.com/dohkoos/antlr4-short-course)。
+本教程根据最新的ANTLR 4编写，以开源的形式创作，源码托管在GitHub上，欢迎[参与维护](https://github.com/dohkoos/antlr4-short-course)。
 
 在线阅读：[《ANTLR 4简明教程》](https://www.gitbook.com/book/dohkoos/antlr4-short-course)。
 
