@@ -30,8 +30,8 @@ ANTLR Parser Generator  Version 4.7.1
 java -cp antlr-4.7.1-complete.jar org.antlr.v4.Tool $*
 ```
 
-把它保存为antlr.sh，以后就可以使用下列命令来运行ANTLR工具：
+把它保存为antlr，以后就可以使用下列命令来运行ANTLR工具：
 
 ```
-$ ./antlr.sh
+$ ./antlr
 ```
