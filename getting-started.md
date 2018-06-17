@@ -20,8 +20,8 @@ $ ./antlr Hello.g
 
 ```
 $ ls Hello*
-Hello.g       Hello.tokens            HelloLexer.interp  HelloLexer.tokens   HelloParser.java
-Hello.interp  HelloBaseListener.java  HelloLexer.java    HelloListener.java
+Hello.tokens  HelloLexer.interp  HelloLexer.java   HelloBaseListener.java  Hello.g
+Hello.interp  HelloLexer.tokens  HelloParser.java  HelloListener.java
 ```
 
 现在开始准备编译由ANTLR生成的Java代码。先写个脚本把编译命令包装起来：
@@ -71,7 +71,7 @@ TestRig会打印出记号的列表，每一行输出表示一个记号以及它�
 
 这里详细讲解下[@1,6:10='world',<2>,1:6]的意义。@1表示记号索引（从0开始计数）；6:10表示记号开始与结束的位置（从0开始计数）；<2>表示记号类型，具体数值和类型存储在后缀名为tokens的文件中；最后的1:6表示记号在第一行（从1开始计数），从第6个字符开始（从0开始计数，制表符作为单个字符计算）。
 
-以LISP风格的文本形式查看记号：
+或者以LISP风格的文本形式查看记号：
 
 ```
 $ ./grun Hello s -tree
@@ -83,7 +83,7 @@ $ ./grun Hello s -tree
 (s hello world)
 ```
 
-还可以以可视化的方式查看语法分析树：
+最直观的就是以可视化的方式查看语法分析树：
 
 ```
 $ ./grun Hello s -gui
