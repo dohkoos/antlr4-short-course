@@ -6,7 +6,7 @@ ANTLR是由Java写成的，所以在安装ANTLR前必须保证已经安装有Jav
 $ curl -O https://www.antlr.org/download/antlr-4.7.1-complete.jar
 ```
 
-归档文件包含运行ANTLR工具的所有必要依赖，以及编译和执行由ANTLR生成的识别器所需的运行库。简而言之，就是ANTLR工具将文法转换成识别程序，然后识别程序利用ANTLR运行库中的某些支持类识别由该文法描述的语言中的句子。此外，该归档文件还包含两个支持库：<a href="https://github.com/abego/treelayout">TreeLayout（一个复杂的树布局库）</a>和<a href="http://www.stringtemplate.org/">StringTemplate（一个用于生成代码和其它结构化文本的模板引擎）</a>。
+归档文件包含运行ANTLR工具的所有必要依赖，以及编译和执行由ANTLR生成的识别器所需的运行库。简而言之，就是ANTLR工具将文法转换成识别程序，然后识别程序利用ANTLR运行库中的某些支持类识别由该文法描述的语言的句子。此外，该归档文件还包含两个支持库：<a href="https://github.com/abego/treelayout">TreeLayout（一个复杂的树布局库）</a>和<a href="http://www.stringtemplate.org/">StringTemplate（一个用于生成代码和其它结构化文本的模板引擎）</a>。
 
 现在来测试下ANTLR工具是否工作正常：
 
